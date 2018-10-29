@@ -1,0 +1,122 @@
+:root{
+	--naranja: #fbb724;
+	--azul: #1753c1;
+	--fondo: #f9fafc;
+}
+
+body{
+	background: white;
+	font-family: 'Montserrat', system-ui;
+	padding: 0;
+	margin: 0;
+}
+
+.portada{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	height: 100vh;
+	& .left{
+		background: var(--naranja);
+		padding: 4em 5em;
+		display: flex;
+		align-items: center;
+		& .title{
+			color: white;
+			text-transform: uppercase;
+			font-size: 2.5rem;
+		}
+		& .descripcion{
+			color: white;
+			margin-bottom: 3em;
+		}
+		& .btn{
+			background: var(--azul);
+			color: white;
+			padding: 1em 2em;
+			text-transform: uppercase;
+			border-radius: 5px;
+			text-decoration: none;
+		}
+	}
+	& .rigth{
+		background: url('../img/bg.jpg') center center no-repeat;
+		background-size: cover;
+	}
+}
+.gestion{
+	padding: 4em 5em;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	& .title{
+		text-align: center;
+		color: var(--azul);
+		text-transform: uppercase;
+	}
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(4,1fr);
+		grid-template-rows: 100px 100px 100px;
+		margin-top: 8em;
+		& .item{
+			text-align: center;
+			& .icono{
+				color: var(--naranja);
+				font-size: 3rem;
+			}
+			& .subtitle{
+				color: var(--azul);
+			}
+			&:nth-of-type(1),&:nth-of-type(3){
+				grid-row-start: 1;
+				grid-row-end: 3;
+			}
+			&:nth-of-type(2),&:nth-of-type(4){
+				grid-row-start: 2;
+			}
+		}
+	}
+}
+.disciplinas{
+	background: var(--fondo);
+	text-align: center;
+	padding: 4em 5em;
+	& .title{
+		color: var(--azul);
+		text-transform: uppercase;
+		margin-bottom: 3em;
+	}
+	& .grid{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		& .flex{
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			margin-bottom: 3em;
+			& .icono{
+				color: var(--azul);
+				font-size: 3rem;
+			}
+			& .subtitle{
+				color: var(--naranja);
+			}
+			& .circulo{
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				& .circle{
+					width: 100px;
+					height: 100px;
+					background: var(--azul);
+					border-radius: 50%;
+				}
+			}
+			&:nth-of-type(2){
+				grid-template-columns: 1fr 1fr 1fr;
+			}
+		}
+
+	}
+}
