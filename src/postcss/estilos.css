@@ -43,12 +43,44 @@ body{
 		background-size: cover;
 	}
 }
+.caracteristicas{
+	padding: 4em 5em;
+	& .title{
+		margin-bottom: 2em;
+		color: var(--azul);
+	}
+	& .contenedor{
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-gap: 2em;
+		& .item{
+			overflow: hidden;
+			& .header{
+				border-radius: 5px 5px 0 0;
+				background: #16305f;
+				padding: 2em;
+				& .title{
+					margin: 0;
+					color: white;
+				}
+			}
+			& .body{
+				background: color(#02c6b4 a(50%));
+				padding: .5em 2em;
+				border-radius: 0 0 5px 5px;
+				height: 100%;
+			}
+			
+		}
+	}
+}
 .gestion{
 	padding: 4em 5em;
 	height: 100vh;
 	display: flex;
 	align-items: center;
 	flex-direction: column;
+	background: var(--fondo);
 	& .title{
 		text-align: center;
 		color: var(--azul);
@@ -79,7 +111,7 @@ body{
 	}
 }
 .disciplinas{
-	background: var(--fondo);
+	
 	text-align: center;
 	padding: 4em 5em;
 	& .title{
@@ -119,4 +151,55 @@ body{
 		}
 
 	}
+}
+.integrantes{
+	background: var(--fondo);
+	padding: 4em 5em;
+	& .grid{
+		display: grid;
+		grid-template-columns: repeat(3,1fr);
+		grid-gap: 2em;
+		& .item{
+			overflow: hidden;
+			border-radius: 15px;
+			& .header{
+				& .imagen{
+					width: 100%;
+				}
+			}
+			& .body{
+				background: white;
+				display: flex;
+				justify-content: center;
+				position: relative;
+				padding: 5em 2em 2em;
+				& .perfil{
+					width: 30%;
+					overflow: hidden;
+					border-radius: 50%;
+					margin: 0;
+					position: absolute;
+					top: -4em;
+					border: 1.5px solid var(--azul);
+					& .foto{
+						width: 100%;
+						vertical-align: top;
+					}
+				}
+				& .nombre{
+					font-size: 1.2rem;
+				}
+			}
+		}
+	}
+}
+
+.footer{
+	padding: 1em 2em;
+	background: var(--azul);
+	color: white;
+	& a{
+		color: var(--naranja);
+		text-decoration: none;
+	}	
 }
